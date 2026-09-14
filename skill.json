@@ -1,0 +1,33 @@
+{
+  "name": "genpark-realtime-voice-noise-suppression-gate-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Real-time acoustic noise floor estimator and spectral gate suppressing ambient background noise and reverberation for speech agents.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "alphaparkinc",
+  "category": "voice-ai",
+  "tags": [
+    "voice-ai",
+    "noise-suppression",
+    "spectral-gate",
+    "snr-estimation",
+    "webrtc-dsp"
+  ],
+  "inputs": {
+    "frame_amplitudes": {
+      "type": "array"
+    }
+  },
+  "outputs": {
+    "frame_level_db": {
+      "type": "number"
+    },
+    "signal_to_noise_ratio_db": {
+      "type": "number"
+    },
+    "spectral_gate_verdict": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
